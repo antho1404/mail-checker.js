@@ -18,7 +18,7 @@ $(function() {
     $(this).bind(options.trigger_on, function() {
       var data = { email: $(this).val() };
       $.ajax({
-        url: "http://mail-checker.com/emails.json",
+        url: "http://mail-checker.com/check",
         data: data,
         dataType: "json",
         complete: options.complete
