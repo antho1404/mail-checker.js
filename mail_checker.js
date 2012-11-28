@@ -1,6 +1,5 @@
 $(function() {
   $.fn.mail_checker = function(options) {
-    
     var defaults = {
       trigger_on: "change",
       success:        function() { },
