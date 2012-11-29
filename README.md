@@ -3,7 +3,7 @@ mail-checker.js
 
 The easiest way to validate your emails !
 
-This script permits to validate your emails using http://mail-checker.com/
+This script permits to validate your emails using http://www.mail-checker.com/
 The validation works in 3 steps:
   - validate the format of your email
   - validate the domain accessibility
@@ -11,9 +11,9 @@ The validation works in 3 steps:
 
 ## How to use
 
-Simply add the script in your page then
+Simply signup and create your app on http://www.mail-checker.com then add this script in your page with the token given when the application registration is done
 
-    $("input[type=email]").mail_checker({
+    $("input[type=email]").mail_checker('your_api_token_key', {
         success:        function() { }, // stuff when email is valid 
         invalid_format: function() { }, // stuff when email format is invalid
         invalid_domain: function() { }, // stuff when domain doesn't respond
