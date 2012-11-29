@@ -34,7 +34,7 @@ $(function() {
         token: token
       };
       $.ajax({
-        url: "/check",
+        url: "http://www.mail-checker.com/check",
         data: data,
         dataType: "json",
         complete: options.complete
