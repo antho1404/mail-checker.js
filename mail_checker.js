@@ -19,7 +19,9 @@ $(function() {
         if(response.status === 406) options.temporary_mail();
         if(response.status === 400) options.error($.parseJSON(response.responseText).error);
       }
-    }
+    },
+    domain = document.domain.match(/([^.]+)\.[^.]+.?$/);
+    if(domain && domain.length > 0) domain = domain[0];
     options = $.extend({}, defaults, options);
     if(!token) {
       token = options.token;
@@ -31,7 +33,7 @@ $(function() {
     $(this).bind(options.trigger_on, function() {
       var data = {
         token: token,
-        domain: document.domain,
+        domain: domain,
         email: $(this).val()
       };
       $.ajax({
