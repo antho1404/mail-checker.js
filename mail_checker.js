@@ -30,8 +30,9 @@ $(function() {
     }
     $(this).bind(options.trigger_on, function() {
       var data = {
-        email: $(this).val(),
-        token: token
+        token: token,
+        domain: document.domain,
+        email: $(this).val()
       };
       $.ajax({
         url: "http://www.mail-checker.com/check",
